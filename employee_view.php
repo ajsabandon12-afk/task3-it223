@@ -4,15 +4,15 @@ $user = "root";
 $pass = "";
 $db   = "hr";
 
-// Connect to database
+
 $conn = new mysqli($host, $user, $pass, $db);
 
-// Check connection
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Query the VIEW
+
 $sql = "SELECT * FROM vw_employee_full_details";
 $result = $conn->query($sql);
 ?>
@@ -86,4 +86,5 @@ if ($result->num_rows > 0) {
 
 <?php
 $conn->close();
+
 ?>
